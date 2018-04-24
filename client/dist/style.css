@@ -41,9 +41,14 @@ section {
 }
 
 nav {
+  padding: 20px;
   flex-shrink: 0;
   width: 210px;
   background-color: white;
+}
+
+nav > dl {
+  margin: 0 0 20px 0;
 }
 
 content {
