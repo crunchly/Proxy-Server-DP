@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, '../client/dist')));
 // Dynamic
 app.use('/funding-rounds', (req, res) => {
   fetch(`http://localhost:3001${req.originalUrl}`)
-    .then(response => response.json())
+    .then(fetchRes => fetchRes.json())
     .then(data => res.send(data));
 });
 
