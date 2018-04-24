@@ -16,6 +16,18 @@ app.use('/funding-rounds', (req, res) => {
     .then(data => res.send(data));
 });
 
+app.use('/overview', (req, res) => {
+  fetch(`http://localhost:3002${req.originalUrl}`)
+    .then(response => response.json())
+    .then(data => res.send(data));
+});
+
+app.use('/api/funding_round', (req, res) => {
+  fetch(`http://localhost:3003${req.originalUrl}`)
+    .then(response => response.json())
+    .then(data => res.send(data));
+});
+
 app.listen(port, () => {
   process.stdout.write(`server running at: http://localhost:${port}\n`);
 });
