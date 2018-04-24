@@ -1,11 +1,16 @@
 body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
   font-family: Roboto,Helvetica Neue,sans-serif;
 }
 
 header {
   display: flex;
   align-items: center;
-  padding: 1.1em 1em;
+  padding: 1.3em 1em;
   background-color: rgb(2, 136, 209);
   color: white;
 }
@@ -35,27 +40,31 @@ section {
 }
 
 nav {
-  display: inline-block;
   flex-shrink: 0;
   width: 210px;
   background-color: white;
 }
 
 content {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   flex-shrink: 1;
   min-width: 0;
+  flex-grow: 1;
 }
 
 .content-head {
-  display: flex;
   padding: 1em;
   border-left: 5px red solid;
   background-color: white;
 }
 
 .content-head__buttons {
-  margin-left: auto;
+  float: right;
+}
+
+.content-scrollable {
+  overflow-y: auto;
 }
 
 .modules {
