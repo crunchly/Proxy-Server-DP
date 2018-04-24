@@ -1,3 +1,35 @@
+body {
+  font-family: Roboto,Helvetica Neue,sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 1.1em 1em;
+  background-color: rgb(2, 136, 209);
+  color: white;
+}
+
+header > span {
+  margin: 0 1.5em;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+header > span:first-child {
+  margin-left: 0.5em;
+}
+
+header > input {
+  flex-grow: 1;
+  margin: 0 1.5em;
+}
+
+header > span > strong {
+  font-size: 1.5em;
+  letter-spacing: 0.05em;
+}
+
 section {
   display: flex;
 }
@@ -13,5 +45,24 @@ content {
   display: inline-block;
   flex-shrink: 1;
   min-width: 0;
+}
+
+.content-head {
+  display: flex;
+  padding: 1em;
+  border-left: 5px red solid;
+  background-color: white;
+}
+
+.content-head__buttons {
+  margin-left: auto;
+}
+
+.modules {
   padding: 20px;
+}
+
+.content-footer {
+  background-color: #0c4265;
+  color: white;
 }
