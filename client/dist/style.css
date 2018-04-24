@@ -45,7 +45,7 @@ nav {
   flex-shrink: 0;
   width: 210px;
   background-color: white;
-  z-index: 1;
+  z-index: 2;
 }
 
 nav > dl {
@@ -61,13 +61,19 @@ content {
 }
 
 .content-head {
-  padding: 1em;
+  padding: 16px;
   border-left: 5px red solid;
   background-color: white;
+  font-size: 20px;
+  z-index: 1;
 }
 
 .content-head__buttons {
   float: right;
+}
+
+.content-head__buttons > button {
+  vertical-align: middle;
 }
 
 .content-scrollable {
