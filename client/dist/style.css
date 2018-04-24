@@ -76,3 +76,29 @@ content {
   background-color: #0c4265;
   color: white;
 }
+
+/******************** Integration with conflicting CSS */
+
+.component-container {
+  background-color: white;
+}
+
+#app {
+  padding: 0;
+}
+
+#funding_rounds {
+  width: 100%;
+}
+
+.team {
+  width: inherit;
+}
+
+.modules > div {
+  margin-bottom: 20px;
+}
+
+.modules > div:last-child {
+  margin-bottom: 0px;
+}

@@ -22,6 +22,12 @@ app.use('/overview', (req, res) => {
     .then(data => res.send(data));
 });
 
+app.use('/people', (req, res) => {
+  fetch(`http://localhost:3004${req.originalUrl}`)
+    .then(response => response.json())
+    .then(data => res.send(data));
+});
+
 app.use('/api/funding_round', (req, res) => {
   fetch(`http://localhost:3003${req.originalUrl}`)
     .then(response => response.json())
