@@ -1,0 +1,153 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  font-family: Roboto,Helvetica Neue,sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 1.9em 1em;
+  background-color: rgb(2, 136, 209);
+  color: white;
+}
+
+header > span {
+  margin: 0 1.5em;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+header > span:first-child {
+  margin-left: 0.5em;
+}
+
+header > input {
+  flex-grow: 1;
+  margin: 0 1.5em;
+}
+
+header > span > strong {
+  font-size: 1.5em;
+  letter-spacing: 0.05em;
+}
+
+section {
+  display: flex;
+}
+
+nav {
+  padding: 20px;
+  flex-shrink: 0;
+  width: 210px;
+  background-color: white;
+  z-index: 2;
+}
+
+nav > dl {
+  margin: 0 0 20px 0;
+}
+
+content {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  min-width: 0;
+  flex-grow: 1;
+}
+
+.content-head {
+  padding: 16px;
+  border-left: 5px red solid;
+  background-color: white;
+  font-size: 20px;
+  z-index: 1;
+}
+
+.content-head__buttons {
+  float: right;
+}
+
+.content-head__buttons > button {
+  vertical-align: middle;
+}
+
+.content-scrollable {
+  overflow-y: auto;
+}
+
+.column-flex {
+  display: flex;
+  padding: 20px;
+}
+
+.content-sidebar {
+  margin-left: 20px;
+  flex-shrink: 0;
+}
+
+.content-sidebar__card {
+  padding: 20px;
+  background: #fff;
+  color: rgba(0,0,0,.87);
+  margin-bottom: 20px;
+}
+
+.content-ad__top {
+  margin: 20px auto 0 auto;
+  width: 728px;
+  height: 90px;
+  line-height: 90px;
+}
+
+.content-ad__side {
+  height: 90px;
+  line-height: 90px;
+}
+
+.content-ad {
+  text-align: center;
+  border: 1px solid black;
+}
+
+.content-footer {
+  padding: 20px;
+  background-color: #0c4265;
+  color: white;
+}
+
+/******************** Utility */
+
+.shadow {
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+/******************** Integration with conflicting CSS */
+
+.component-container {
+  background-color: white;
+}
+
+#app {
+  padding: 0;
+}
+
+#funding_rounds {
+  width: 100%;
+}
+
+.team {
+  width: inherit;
+}
+
+.modules > div {
+  margin-bottom: 20px;
+}
+
+.modules > div:last-child {
+  margin-bottom: 0px;
+}
