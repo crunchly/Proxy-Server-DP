@@ -14,8 +14,7 @@ app.use('/funding-rounds', (req, res) => {
   fetch(`http://localhost:3001${req.originalUrl}`)
     .then(fetchRes => fetchRes.json())
     .then(data => res.send(data))
-    .catch(err => {
-      console.error(err);
+    .catch(() => {
       res.sendStatus(404);
     });
 });
@@ -24,8 +23,7 @@ app.use('/overview', (req, res) => {
   fetch(`http://localhost:3002${req.originalUrl}`)
     .then(response => response.json())
     .then(data => res.send(data))
-    .catch(err => {
-      console.error(err);
+    .catch(() => {
       res.sendStatus(404);
     });
 });
@@ -34,8 +32,7 @@ app.use('/people', (req, res) => {
   fetch(`http://localhost:3004${req.originalUrl}`)
     .then(response => response.json())
     .then(data => res.send(data))
-    .catch(err => {
-      console.error(err);
+    .catch(() => {
       res.sendStatus(404);
     });
 });
@@ -44,8 +41,7 @@ app.use('/api/funding_round', (req, res) => {
   fetch(`http://localhost:3003${req.originalUrl}`)
     .then(response => response.json())
     .then(data => res.send(data))
-    .catch(err => {
-      console.error(err);
+    .catch(() => {
       res.sendStatus(404);
     });
 });
