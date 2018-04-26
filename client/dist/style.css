@@ -114,6 +114,11 @@ content {
   border: 1px solid black;
 }
 
+.modules {
+  flex-grow: 1;
+  min-width: 0;
+}
+
 .content-footer {
   padding: 20px;
   background-color: #0c4265;
