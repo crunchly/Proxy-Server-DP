@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, '../client/dist')));
 
 // Dynamic
 app.use('/funding-rounds', (req, res) => {
-  fetch(`http://ec2-54-153-47-59.us-west-1.compute.amazonaws.com/funding-rounds/${req.originalUrl}`)
+  fetch(`http://ec2-54-153-47-59.us-west-1.compute.amazonaws.com/${req.originalUrl}`)
     .then(fetchRes => fetchRes.json())
     .then(data => res.send(data))
     .catch((err) => {
