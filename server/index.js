@@ -15,7 +15,6 @@ app.use('/organization/:company', express.static(path.join(__dirname, '../client
 
 // Dynamic
 app.use('/organization/:company/funding-rounds', (req, res) => {
-  console.log(`http://ec2-13-57-175-222.us-west-1.compute.amazonaws.com/funding-rounds/${req.params.company}`);
   fetch(`http://ec2-13-57-175-222.us-west-1.compute.amazonaws.com/funding-rounds/${req.params.company}`)
     .then(fetchRes => fetchRes.json())
     .then(data => res.send(data))
