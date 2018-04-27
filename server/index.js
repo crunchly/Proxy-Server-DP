@@ -45,7 +45,7 @@ app.use('/people', (req, res) => {
 });
 
 app.use('/api/funding_round', (req, res) => {
-  fetch(`http://ec2-18-216-187-237.us-east-2.compute.amazonaws.com${req.originalUrl}`)
+  fetch(`http://ec2-13-59-188-143.us-east-2.compute.amazonaws.com${req.originalUrl}`)
     .then(response => response.json())
     .then(data => res.send(data))
     .catch((err) => {
