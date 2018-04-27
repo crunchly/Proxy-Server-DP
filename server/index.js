@@ -8,6 +8,9 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(morgan('dev'));
+
+app.get('/', (req, res) => res.redirect('/organization/Facebook'));
+
 app.use('/organization/:company', express.static(path.join(__dirname, '../client/dist')));
 
 // Dynamic
@@ -55,3 +58,4 @@ app.use('/api/funding_round', (req, res) => {
 app.listen(port, () => {
   process.stdout.write(`server running at: http://localhost:${port}\n`);
 });
+
