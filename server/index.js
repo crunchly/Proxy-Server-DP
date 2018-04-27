@@ -42,7 +42,7 @@ app.use('/people', (req, res) => {
 });
 
 app.use('/api/funding_round', (req, res) => {
-  fetch(`http://localhost:3003${req.originalUrl}`)
+  fetch(`http://ec2-13-58-198-22.us-east-2.compute.amazonaws.com{req.originalUrl}`)
     .then(response => response.json())
     .then(data => res.send(data))
     .catch((err) => {
