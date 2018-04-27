@@ -8,11 +8,12 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(morgan('dev'));
-app.use(express.static(path.join(__dirname, '../client/dist')));
+app.use('/organization/:company', express.static(path.join(__dirname, '../client/dist')));
 
 // Dynamic
-app.use('/funding-rounds', (req, res) => {
-  fetch(`http://ec2-13-57-175-222.us-west-1.compute.amazonaws.com${req.originalUrl}`)
+app.use('/organization/:company/funding-rounds', (req, res) => {
+  console.log(`http://ec2-13-57-175-222.us-west-1.compute.amazonaws.com/funding-rounds/${req.params.company}`);
+  fetch(`http://ec2-13-57-175-222.us-west-1.compute.amazonaws.com/funding-rounds/${req.params.company}`)
     .then(fetchRes => fetchRes.json())
     .then(data => res.send(data))
     .catch((err) => {
