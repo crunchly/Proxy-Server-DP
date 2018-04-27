@@ -35,7 +35,7 @@ app.use('/overview', (req, res) => {
 });
 
 app.use('/people', (req, res) => {
-  fetch(`http://ec2-52-34-86-177.us-west-2.compute.amazonaws.com/${req.originalUrl}`)
+  fetch(`http://ec2-52-34-86-177.us-west-2.compute.amazonaws.com${req.originalUrl}`)
     .then(response => response.json())
     .then(data => res.send(data))
     .catch((err) => {
