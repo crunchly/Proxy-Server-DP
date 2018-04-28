@@ -142,7 +142,7 @@ content {
 }
 
 #funding_rounds {
-  width: 100%;
+  width: 100%!important;
 }
 
 .team {
