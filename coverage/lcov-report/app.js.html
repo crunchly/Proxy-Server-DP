@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">41.18% </span>
+        <span class="strong">67.65% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>14/34</span>
+        <span class='fraction'>23/34</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,21 +30,21 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">5.88% </span>
+        <span class="strong">58.82% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/17</span>
+        <span class='fraction'>10/17</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">39.39% </span>
+        <span class="strong">66.67% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>13/33</span>
+        <span class='fraction'>22/33</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line medium'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -119,9 +119,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -139,9 +139,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -149,9 +149,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -175,10 +175,10 @@ app.get('/', (req, res) =&gt; res.redirect('/organization/Facebook'));
 app.use('/organization/:company', express.static(path.join(__dirname, '../client/dist')));
 &nbsp;
 // Dynamic
-app.use('/organization/:company/funding-rounds', <span class="fstat-no" title="function not covered" >(r</span>eq, res) =&gt; {
-<span class="cstat-no" title="statement not covered" >  fetch(`http://ec2-13-57-175-222.us-west-1.compute.amazonaws.com/funding-rounds/${req.params.company}`)</span>
-    .then(<span class="fstat-no" title="function not covered" >fe</span>tchRes =&gt; <span class="cstat-no" title="statement not covered" >fetchRes.json())</span>
-    .then(<span class="fstat-no" title="function not covered" >da</span>ta =&gt; <span class="cstat-no" title="statement not covered" >res.send(data))</span>
+app.use('/organization/:company/funding-rounds', (req, res) =&gt; {
+  fetch(`http://ec2-13-57-175-222.us-west-1.compute.amazonaws.com/funding-rounds/${req.params.company}`)
+    .then(fetchRes =&gt; fetchRes.json())
+    .then(data =&gt; res.send(data))
     .catch(<span class="fstat-no" title="function not covered" >(e</span>rr) =&gt; {
 <span class="cstat-no" title="statement not covered" >      console.error(err.stack);</span>
 <span class="cstat-no" title="statement not covered" >      res.sendStatus(404);</span>
@@ -195,20 +195,20 @@ app.use('/overview', <span class="fstat-no" title="function not covered" >(r</sp
     });
 });
 &nbsp;
-app.use('/people', <span class="fstat-no" title="function not covered" >(r</span>eq, res) =&gt; {
-<span class="cstat-no" title="statement not covered" >  fetch(`http://ec2-52-34-86-177.us-west-2.compute.amazonaws.com${req.originalUrl}`)</span>
-    .then(<span class="fstat-no" title="function not covered" >re</span>sponse =&gt; <span class="cstat-no" title="statement not covered" >response.json())</span>
-    .then(<span class="fstat-no" title="function not covered" >da</span>ta =&gt; <span class="cstat-no" title="statement not covered" >res.send(data))</span>
+app.use('/people', (req, res) =&gt; {
+  fetch(`http://ec2-52-34-86-177.us-west-2.compute.amazonaws.com${req.originalUrl}`)
+    .then(response =&gt; response.json())
+    .then(data =&gt; res.send(data))
     .catch(<span class="fstat-no" title="function not covered" >(e</span>rr) =&gt; {
 <span class="cstat-no" title="statement not covered" >      console.error(err.stack);</span>
 <span class="cstat-no" title="statement not covered" >      res.sendStatus(404);</span>
     });
 });
 &nbsp;
-app.use('/api/funding_round', <span class="fstat-no" title="function not covered" >(r</span>eq, res) =&gt; {
-<span class="cstat-no" title="statement not covered" >  fetch(`http://ec2-13-59-188-143.us-east-2.compute.amazonaws.com${req.originalUrl}`)</span>
-    .then(<span class="fstat-no" title="function not covered" >re</span>sponse =&gt; <span class="cstat-no" title="statement not covered" >response.json())</span>
-    .then(<span class="fstat-no" title="function not covered" >da</span>ta =&gt; <span class="cstat-no" title="statement not covered" >res.send(data))</span>
+app.use('/api/funding_round', (req, res) =&gt; {
+  fetch(`http://ec2-13-59-188-143.us-east-2.compute.amazonaws.com${req.originalUrl}`)
+    .then(response =&gt; response.json())
+    .then(data =&gt; res.send(data))
     .catch(<span class="fstat-no" title="function not covered" >(e</span>rr) =&gt; {
 <span class="cstat-no" title="statement not covered" >      console.error(err.stack);</span>
 <span class="cstat-no" title="statement not covered" >      res.sendStatus(404);</span>
@@ -223,7 +223,7 @@ module.exports = app;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Apr 27 2018 19:59:24 GMT-0700 (PDT)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Apr 27 2018 20:38:36 GMT-0700 (PDT)
 </div>
 </div>
 <script src="prettify.js"></script>
