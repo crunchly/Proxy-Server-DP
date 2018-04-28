@@ -6,5 +6,6 @@ jest.mock('node-fetch');
 
 test('get "/" should send redirect', () => request(app).get('/').expect(302));
 test('get "/organization/Facebook/funding-rounds" should return data', () => request(app).get('/organization/Facebook/funding-rounds').expect(dummyData));
-test('get /people should return data', () => request(app).get('/people/Facebook').expect(dummyData));
+test('get /people/Facebook should return data', () => request(app).get('/people/Facebook').expect(dummyData));
+test('get /overview/1 should return data', () => request(app).get('/overview/1').expect(dummyData));
 test('get /api/funding_round should return data', () => request(app).get('/api/funding_round').expect(dummyData));
