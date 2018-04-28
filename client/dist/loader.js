@@ -3,6 +3,7 @@ window.onload = () => {
     { uri: 'http://ec2-13-57-175-222.us-west-1.compute.amazonaws.com', css: '/style.css' },
     { uri: 'http://ec2-13-59-188-143.us-east-2.compute.amazonaws.com', css: '/style.css' },
     { uri: 'http://ec2-52-34-86-177.us-west-2.compute.amazonaws.com', css: '/styles.css' },
+    { uri: 'http://ec2-54-219-172-244.us-west-1.compute.amazonaws.com', css: '/styles.css' },
   ];
 
   modules.forEach((module) => {

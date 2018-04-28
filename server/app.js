@@ -23,9 +23,8 @@ app.use('/organization/:company/funding-rounds', (req, res) => {
     });
 });
 
-/*
 app.use('/overview', (req, res) => {
-  fetch(`http://localhost:3002${req.originalUrl}`)
+  fetch(`http://ec2-54-219-172-244.us-west-1.compute.amazonaws.com${req.originalUrl}`)
     .then(response => response.json())
     .then(data => res.send(data))
     .catch((err) => {
@@ -33,7 +32,6 @@ app.use('/overview', (req, res) => {
       res.sendStatus(404);
     });
 });
-*/
 
 app.use('/people', (req, res) => {
   fetch(`http://ec2-52-34-86-177.us-west-2.compute.amazonaws.com${req.originalUrl}`)
