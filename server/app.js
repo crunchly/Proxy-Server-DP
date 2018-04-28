@@ -23,6 +23,7 @@ app.use('/organization/:company/funding-rounds', (req, res) => {
     });
 });
 
+/*
 app.use('/overview', (req, res) => {
   fetch(`http://localhost:3002${req.originalUrl}`)
     .then(response => response.json())
@@ -32,6 +33,7 @@ app.use('/overview', (req, res) => {
       res.sendStatus(404);
     });
 });
+*/
 
 app.use('/people', (req, res) => {
   fetch(`http://ec2-52-34-86-177.us-west-2.compute.amazonaws.com${req.originalUrl}`)
