@@ -8,6 +8,10 @@ body {
   font-family: Roboto,Helvetica Neue,sans-serif;
 }
 
+img {
+  border: none!important;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -41,7 +45,6 @@ section {
 }
 
 nav {
-  padding: 20px;
   flex-shrink: 0;
   width: 210px;
   background-color: white;
@@ -49,7 +52,7 @@ nav {
 }
 
 nav > dl {
-  margin: 0 0 20px 0;
+  margin: 20px; 
 }
 
 content {
@@ -61,11 +64,14 @@ content {
 }
 
 .content-head {
-  padding: 16px;
+  padding: 0 16px; 
   border-left: 5px red solid;
   background-color: white;
   font-size: 20px;
   z-index: 1;
+  flex-shrink: 0;
+  height: 55px;
+  line-height: 55px;
 }
 
 .content-head__buttons {
@@ -95,6 +101,7 @@ content {
   background: #fff;
   color: rgba(0,0,0,.87);
   margin-bottom: 20px;
+  width: 250px;
 }
 
 .content-ad__top {
